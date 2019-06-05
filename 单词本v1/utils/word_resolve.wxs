@@ -1,0 +1,45 @@
+var trans = (function(wordObject) {
+    var symboles = wordObject.ciba.content.symbols;
+    var symboleString = '';
+    var note = '';
+    symboles.forEach((function(t) {
+        if (t.parts !== undefined) {
+            t.parts.forEach((function(t1) {
+                symboleString = symboleString + t1.part + " ";
+                t1.means.forEach((function(t2) {
+                    symboleString = symboleString + t2 + " "
+                }));
+                symboleString = symboleString + '\n'
+            }))
+        }
+    }));
+    if (wordObject.note != undefined) {
+        symboleString = symboleString + '\n备注:\n' + wordObject.note
+    };
+    return (symboleString)
+});
+var en = (function(wordObject) {
+    var enString = '';
+    if (wordObject.ciba.content.symbols[(0)].ph_en == undefined) {
+        return (enString)
+    };
+    if (wordObject.ciba.content.symbols[(0)].ph_en != '') {
+        enString = '[ ' + wordObject.ciba.content.symbols[(0)].ph_en + ' ]英'
+    };
+    return (enString)
+});
+var am = (function(wordObject) {
+    var enString = '';
+    if (wordObject.ciba.content.symbols[(0)].ph_am == undefined) {
+        return (enString)
+    };
+    if (wordObject.ciba.content.symbols[(0)].ph_am != '') {
+        enString = '[ ' + wordObject.ciba.content.symbols[(0)].ph_am + ' ]美'
+    };
+    return (enString)
+});
+module.exports = ({
+    trans: trans,
+    am: am,
+    en: en,
+});

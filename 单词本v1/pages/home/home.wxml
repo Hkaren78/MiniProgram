@@ -1,0 +1,30 @@
+<image class="word_image" mode="aspectFit" src="{{imageUrlBase+wordObject.images[playIndexImage]}}" wx:if="{{wordObject.images[playIndexImage]!=undefined}}"></image>
+<div bindtap="bindtapPause" catchtouchmove="catchtouchmove" class="overlay"></div>
+<image catchtouchmove="catchtouchmove" class="overlay_boom_back_iamge" hidden="{{wordLists.length==0}}" src="/utils/image/home_boom_back.png"></image>
+<div bindtap="bindtapPause" catchtouchmove="catchtouchmove" class="overlay-boom-back">
+    <text class="note" selectable="true">{{wob.trans(wordObject)}}</text>
+    <text class="word_phonetic_am" selectable="true">{{wob.am(wordObject)}}</text>
+    <text class="word_phonetic_en" selectable="true">{{wob.en(wordObject)}}</text>
+    <text class="word" selectable="true">{{wordObject.word}}</text>
+    <div class="boom_button_back">
+        <view catchtap="bindtapWordDetail" class="iconBtnList" hidden="{{playStatus}}">
+            <image src="../../utils/image/word_detail.png"></image>
+            <view>单词详细</view>
+        </view>
+        <view catchtap="bindtapWordAdd" class="iconBtnList" hidden="{{playStatus}}">
+            <image src="../../utils/image/add.png"></image>
+            <view>查生词</view>
+        </view>
+        <view catchtap="bindtapWordList" class="iconBtnList" hidden="{{playStatus}}">
+            <image src="../../utils/image/word_list.png"></image>
+            <view>单词列表</view>
+        </view>
+    </div>
+</div>
+<image catchtap="bindtapPlay" class="play_button" hidden="{{playStatus}}" src="/utils/image/play_button.png"></image>
+<image catchtap="bindtapMute" class="play_mute" hidden="{{playStatus}}" src="{{mute==1?'/utils/image/muted.png':'/utils/image/mute.png'}}"></image>
+<image catchtap="bindtapWordKnow" class="word_know" hidden="{{playStatus}}" src="{{wordObject.know!=2?'/utils/image/knownot.png':'/utils/image/knowed.png'}}"></image>
+<view class="tips_view">
+    <text class="tips" hidden="{{!tips||playStatus}}" selectable="true">点击查生词或浏览器访问 wodedanciben.com 添加生词到单词本。为生词添加备注和场景图片，可以极大提高记单词效率。</text>
+</view>
+<wxs module="wob" src="../../utils/word_resolve.wxs" />

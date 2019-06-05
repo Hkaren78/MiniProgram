@@ -1,0 +1,3 @@
+<view class="listBox">
+    <view bindtap="bindtapWord" class="list" id="{{item.word}}" wx:for="{{wordLists}}" wx:key="{{item.index}}">{{item.word}}</view>
+</view>

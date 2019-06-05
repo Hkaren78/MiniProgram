@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "单词本",
+    "usingComponents": {
+        "van-icon": "../components/vant/icon/index",
+        "demo-block": "../components/vant/demo-block/index",
+        "van-cell": "../components/vant/cell/index",
+        "van-cell-group": "../components/vant/cell-group/index"
+    }
+}

@@ -1,0 +1,10 @@
+<image class="authorize_icon" src="/utils/image/authorize@1x.png"></image>
+<view class="authorize_text_back_view">
+    <text class="authorize_text" selectable="true">欢迎使用我的单词本。
+ 网页端可以访问'我的单词本'的全拼 wodedanciben.com 查生单词，加入单词本，添加图片和理解注释，根据自己的使用场景背单词，图文并茂，更高效。
+正因为单词本有网页端，而且只有微信登录一种方式，为了你可以享受多端同一账号的使用体验，单词本需要你的授权，授权只是同步微信认证，不会收集你的任何个人资料。</text>
+</view>
+<button bindtap="bindtapAuthorizeReady" class="authorize_button" openType="getUserInfo"> 微信授权 </button>
+<button bindtap="bindtapAuthorize" class="authorize_button"> 已经授权，开始使用 </button>
+<button bindtap="bindtapAuthorizeTest" class="authorize_button"> 不！我想先试试 </button>
+<view class="bottom"></view>

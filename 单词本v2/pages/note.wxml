@@ -1,0 +1,15 @@
+<view class="container">
+    <block wx:if="{{!ThisPageIsEmpty}}" wx:for="{{list}}" wx:for-index="word_index" wx:for-item="word" wx:key="word_index">
+        <demo-block title="{{word.word}}" wx:if="{{word_index!==0}}">
+            <van-cell-group>
+                <van-cell bindtap="edit" data-_id="{{word._id}}" isLink="{{true}}" title="{{meaning_index+1}}. {{meaning}}" wx:for="{{word.meanings}}" wx:for-index="meaning_index" wx:for-item="meaning" wx:key="meaning_index"></van-cell>
+            </van-cell-group>
+        </demo-block>
+    </block>
+    <view class="retract delete_btn_con">
+        <button bindtap="deleteGroup" class="delete_btn" type="warn">删除分组</button>
+    </view>
+    <view class="retract fixed">
+        <button bindtap="goToAddWord" class="inline_btn_base">添加单词</button>
+    </view>
+</view>

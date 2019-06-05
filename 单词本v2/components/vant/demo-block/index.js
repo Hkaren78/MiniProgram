@@ -1,0 +1,9 @@
+Component({
+    properties: {
+        customStyle: String,
+        title: String,
+        padding: Boolean
+    },
+    externalClasses: [ "custom-class" ]
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbIkNvbXBvbmVudCIsInByb3BlcnRpZXMiLCJjdXN0b21TdHlsZSIsIlN0cmluZyIsInRpdGxlIiwicGFkZGluZyIsIkJvb2xlYW4iLCJleHRlcm5hbENsYXNzZXMiXSwibWFwcGluZ3MiOiI7O0FBQUFBLFVBQVU7QUFDUkMsY0FBWTtBQUNWQyxpQkFBYUMsTUFESDtBQUVWQyxXQUFPRCxNQUZHO0FBR1ZFLGFBQVNDO0FBSEMsR0FESjs7QUFPUkMsbUJBQWlCLENBQUMsY0FBRDtBQVBULENBQVYiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJDb21wb25lbnQoe1xyXG4gIHByb3BlcnRpZXM6IHtcclxuICAgIGN1c3RvbVN0eWxlOiBTdHJpbmcsXHJcbiAgICB0aXRsZTogU3RyaW5nLFxyXG4gICAgcGFkZGluZzogQm9vbGVhblxyXG4gIH0sXHJcblxyXG4gIGV4dGVybmFsQ2xhc3NlczogWydjdXN0b20tY2xhc3MnXVxyXG59KTtcclxuIl19

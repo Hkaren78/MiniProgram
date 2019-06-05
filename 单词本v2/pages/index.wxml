@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="welcome" wx:if="{{emptyPage}}">
+        <view>点加号</view>
+        <view>开始背单词吧</view>
+    </view>
+    <demo-block title="{{language}}" wx:for="{{list}}" wx:for-index="language" wx:for-item="groups" wx:key="language">
+        <van-cell-group>
+            <van-cell bindtap="naviToNote" data-group="{{group}}" data-lan="{{language}}" isLink="{{true}}" title="{{group}}" wx:for="{{groups}}" wx:for-item="group" wx:key="index"></van-cell>
+        </van-cell-group>
+    </demo-block>
+    <view bindtap="addLanguage" class="icon">
+        <van-icon name="add" size="128rpx" v-on:click-icon="clickicon"></van-icon>
+    </view>
+    <view class="contact" wx:if="{{!emptyPage}}">
+          发现bug可以告诉我:panjiangyi12@163.com
+    </view>
+</view>

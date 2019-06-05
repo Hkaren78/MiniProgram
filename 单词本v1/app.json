@@ -1,0 +1,16 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/wordAdd/wordAdd",
+        "pages/wordDetail/wordDetail",
+        "pages/wordList/wordList"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "我的单词本",
+        "navigationBarTextStyle": "black"
+    }
+}

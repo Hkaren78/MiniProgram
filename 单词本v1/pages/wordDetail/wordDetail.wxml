@@ -1,0 +1,53 @@
+<view class="top">
+    <view class="word">Knowledge</view>
+    <view class="pronunciation">
+        <view>
+            <image class="play" src="../../utils/image/icon_play.png"></image> 美fdsfsafsd
+      </view>
+        <view>
+            <image class="play" src="../../utils/image/icon_play.png"></image> 英fdsfdsfds
+      </view>
+    </view>
+    <view class="translation">
+      n. 知识，学问；知道，认识；学科 n. (Knowledge)人名；(南非)诺利奇
+    </view>
+    <view class="desc">
+        <view class="title">备注</view>
+        <view class="content">
+      I had no knowledge of this whatsoever until The Times contacted me.在《泰晤士报》和我联系之前，我对这件事毫不知情。
+      </view>
+    </view>
+    <view class="scrollBox">
+        <scroll-view scrollX="true" style=" white-space: nowrap; display: flex">
+            <image class="banner" src="../../utils/image/banner1.png"></image>
+            <image class="banner" src="../../utils/image/banner2.png"></image>
+            <image class="banner" src="../../utils/image/banner3.png"></image>
+        </scroll-view>
+    </view>
+    <view class="btnBox">
+        <button bindtap="setPlain" class="btn">有道词典</button>
+        <button bindtap="setPlain" class="btn">剑桥词典</button>
+    </view>
+</view>
+<view class="line"></view>
+<view class="bottom">
+    <view class="iconBtn">
+        <view class="iconBtnList">
+            <image src="../../utils/image/icon_editor.png"></image>
+            <view>编辑</view>
+        </view>
+        <view class="iconBtnList">
+            <image src="../../utils/image/icon_delete.png"></image>
+            <view>删除</view>
+        </view>
+        <view class="iconBtnList">
+            <image src="../../utils/image/icon_learn.png"></image>
+            <view>已学会</view>
+        </view>
+    </view>
+    <view class="searchBox">
+        <view class="list">查询次数：3次</view>
+        <view class="list">添加时间：2018-09-10   12:30</view>
+        <view class="list">最后查询时间：2018-09-10  12:30</view>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<view class="custom-class demo-block {{padding?'demo-block--padding':''}}">
+    <view class="demo-block__title" style="{{customStyle}}" wx:if="{{title}}">{{title}}</view>
+    <slot></slot>
+</view>

@@ -1,0 +1,13 @@
+{
+    "pages": [
+        "pages/index",
+        "pages/edit",
+        "pages/note"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    }
+}

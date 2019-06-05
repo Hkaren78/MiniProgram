@@ -1,0 +1,69 @@
+<view class="tips_view">
+    <text class="tips" hidden="{{!tips}}" selectable="true">为生词添加备注和场景图片，可以极大提高记单词效率。
+浏览器可以访问 wodedanciben.com 添加生词到单词本。</text>
+</view>
+<view class="add">
+    <view class="addTop">
+        <view class="input">
+            <input bindblur="bindtapAddWord" bindinput="bindinputWord" focus="{{inputFocusWord}}" placeholder="Enter the word" value="{{inputWord}}"></input>
+        </view>
+        <view bindtap="bindtapAddWord" class="btn">
+      {{addTitle}}
+    </view>
+        <view bindtap="bindtapDeleteWord" class="deleBtn" hidden="{{deleteButton}}">
+      删
+    </view>
+    </view>
+    <view class="pronunciation">
+        <view bindtap="bindtapVoice" data-mp3="{{am_mp3}}" hidden="{{ph_am_hidden}}">
+            <image class="play" src="../../utils/image/icon_play.png"></image> 美 {{ph_am}}
+    </view>
+        <view bindtap="bindtapVoice" data-mp3="{{en_mp3}}" hidden="{{ph_en_hidden}}">
+            <image class="play" src="../../utils/image/icon_play.png"></image> 英 {{ph_en}}
+    </view>
+    </view>
+    <text class="translation" hidden="{{trans_hidden}}" selectable="true">
+      {{trans}}
+    </text>
+    <view class="desc">
+        <view class="title">
+            <image class="play" src="../../utils/image/icon_remark.png"></image>
+      备注
+    </view>
+        <view class="content">
+            <textarea bindfocus="bindfocusNote" bindinput="bindinputNote" class="weui-textarea" maxlength="500" placeholder="remarks" placeholderStyle="color:#b3b3b3;font-size:14px;" value="{{note}}"></textarea>
+        </view>
+    </view>
+    <view bindtap="bindtapDisplayImage" class="defaultUpload" data-url="{{image.image}}" wx:for="{{wordImages}}" wx:for-index="idx" wx:for-item="image" wx:key="idx">
+        <image src="{{image.image}}"></image>
+        <view catchtap="bindtapDeleteImage" class="info" data-imageid="{{image.id}}">
+            <image class="delete" src="../../utils/image/icon_delete1.png"></image>
+        </view>
+    </view>
+    <view bindtap="chooseImage" class="upload">
+        <view class="tip">
+            <image src="../../utils/image/icon_addimg.png"></image>
+            <view>添加图片</view>
+        </view>
+    </view>
+</view>
+<view hidden="{{boom_hidden}}">
+    <view class="line"></view>
+    <view class="bottom">
+        <view bindtap="bindtapKnow" class="iconBtn">
+            <view class="iconBtnList" wx:if="{{know=='1'}}">
+                <image src="../../utils/image/icon_learn.png"></image>
+                <view>未学会</view>
+            </view>
+            <view class="iconBtnList" wx:else>
+                <image src="../../utils/image/icon_learn_ed@1x.png"></image>
+                <view>已学会</view>
+            </view>
+        </view>
+        <view class="searchBox">
+            <view class="list">查询次数：{{searchTimes}}次</view>
+            <view class="list">添加时间：{{addTime}}</view>
+            <view class="list">最后查询时间：{{searchTimeNew}}</view>
+        </view>
+    </view>
+</view>
