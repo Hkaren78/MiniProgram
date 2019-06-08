@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-cell": "vant-weapp/cell",
+    "van-cell-group": "vant-weapp/cell-group",
+    "van-swipe-cell": "vant-weapp/swipe-cell",
+    "van-popup": "vant-weapp/popup",
+    "van-datetime-picker": "vant-weapp/datetime-picker"
+  },
+  "onReachBottomDistamce": 100
+}

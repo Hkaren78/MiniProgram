@@ -1,0 +1,21 @@
+<!--pages/words/words.wxml-->
+<view class="all">
+<van-cell-group>
+  <van-field
+    value="{{words.word}}"
+    clearable
+    label="单词"
+    placeholder="请输入单词"
+    bind:input="onChangeWord"
+  />
+  <van-field
+    value="{{words.explanation}}"
+    clearable
+    label="释义"
+    placeholder="请输入单词的释义"
+    border="{{ false }}"
+    bind:input="onChangeExplanation"
+  />
+</van-cell-group>
+<van-button plain type="primary" block bind:click="updatePerWord">更新</van-button>
+</view>

@@ -1,0 +1,53 @@
+/* miniprogram/pages/viewNoteBook/viewnotebook.wxss */
+.van-swipe-cell__right {
+  display: inline-block;
+  width: 65px;
+  height: 44px;
+  font-size: 15px;
+  line-height: 44px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+}
+.timePicker{
+  width:100%; 
+  font-size:14px;  
+  color:white;  
+  height:45px;  
+  bottom: 0;
+  position: fixed;
+}
+.container{
+  background-image: url('http://pic17.photophoto.cn/20101224/0020032981348355_b.jpg');
+  height: 1cm;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn{
+  background-image: url('http://pic17.photophoto.cn/20101224/0020032981348355_b.jpg');
+}
+.inputYear{
+  border-style:solid;
+  background-color:white;
+  border-color:white;
+  margin:0rpx 50rpx 0rpx 50rpx;
+  font-size: 40rpx;
+  width: 3cm;
+}
+.inputMonth{
+  margin-right:1.5cm;
+  border-style:solid;
+  background-color:white;
+  border-color:white;
+  font-size: 40rpx;
+  width: 3cm;
+}
+.shanchu{
+  margin-right:0.4cm;
+  height: 50rpx;
+  width:50rpx;
+  right:5rpx;
+  position: absolute;
+}

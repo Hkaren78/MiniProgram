@@ -1,0 +1,17 @@
+<!--miniprogram/pages/readNoteBook/readnotebook.wxml-->
+<view class="all">
+<input class="input"
+    value="{{ notes.title.value }}"
+    placeholder="请输入标题"
+    border="{{ true }}"
+    bindinput="onChangeTitle"
+    maxlength="6"
+  />
+<textarea class="textarea" auto-focus cursor-spacing="0"
+    value="{{ notes.value.value }}" 
+    placeholder="请在这输入内容" 
+    maxlength="-1"
+    bindinput="onChangeNote"
+  />
+<button class="btn" bindtap='updatePerNote'>保存</button>
+</view>

@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/writeNoteBook/writenotebook",
+    "pages/modifierNoteBook/readnotebook",
+    "pages/viewNoteBook/viewnotebook",
+    "pages/calendar/calendar",
+    "pages/post/post",
+    "pages/post/edit/edit",
+    "pages/post/list/list",
+    "pages/post/detail/detail",
+    "pages/words/words",
+    "pages/addwords/addwords",
+    "pages/home/home"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "多功能记事本",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistamce": 50
+  },
+  "sitemapLocation": "sitemap.json"
+}

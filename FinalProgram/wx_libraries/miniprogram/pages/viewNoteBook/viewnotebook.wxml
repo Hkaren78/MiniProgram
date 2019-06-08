@@ -1,0 +1,46 @@
+<!--miniprogram/pages/viewNoteBook/viewnotebook.wxml-->
+<block wx:for="{{notes}}">
+<van-swipe-cell id="swipe-cell" left-width="{{ 1 }}" right-width="{{ 65 }}"  bind:close="onClose" async-close position="outside" 
+data-note-id="{{item._id}}"
+data-note-title="{{item.title}}"
+data-note-value="{{item.value}}"
+>
+<van-cell-group>
+  <van-cell title="{{item.title.value}}" bind:click="jumpTo" label="{{item.dateYear}}-{{item.dateMonth}}-{{item.dateDay}}"
+    data-note-id="{{item._id}}"
+    data-note-title="{{item.title}}"
+    data-note-value="{{item.value}}"
+  />
+</van-cell-group>
+<view slot="right">删除</view>
+</van-swipe-cell>
+</block>
+
+<view class="timePicker">
+<button bindtap="choosedate">按日期筛选</button>
+</view>
+<van-popup class="popup"
+  show="{{ show }}"
+  position="bottom"
+  overlay="{{ true }}"
+  bind:close="onClose"
+>
+<view class="container">
+  <input class="inputYear"
+    value="{{ Yvalue }}"
+    placeholder="请输入年份"
+    border="{{ true }}"
+    bindinput="onChangeYear"
+    maxlength="4"
+  />
+  <input class="inputMonth"
+    value="{{ Mvalue }}"
+    placeholder="请输入月份"
+    border="{{ true }}"
+    bindinput="onChangeMonth"
+    maxlength="2"
+  />
+  <image class='shanchu' bindtap='release'id='{{index}}' src='/images/de.png'/>
+</view>
+<button class="btn" bindtap="inputdone">完成</button>
+</van-popup>

@@ -1,0 +1,26 @@
+
+<block wx:for="{{words}}">
+<van-swipe-cell id="swipe-cell" left-width="{{ 1 }}" right-width="{{ 65 }}"  bind:close="onClose" async-close position="outside" 
+data-word-id="{{item._id}}"
+data-word-word="{{item.word}}"
+data-word-explanation="{{item.explanation}}"
+>
+<van-cell-group>
+  <van-cell title="{{item.word}}" bind:click="jumpTo" 
+    data-word-id="{{item._id}}"
+    data-word-word="{{item.word}}"
+    data-word-explanation="{{item.explanation}}"
+  />
+</van-cell-group>
+<view slot="right">删除</view>  
+</van-swipe-cell>
+</block>
+<van-button round type="info" block bind:click="orderS">顺序排列</van-button>
+<van-button round type="primary" block bind:click="orderN">逆序排列</van-button>
+
+<view class="all">
+<van-button class="add" round type="info" bind:click="navigateToAddwords">✚</van-button>
+<view class="text"><text>
+点击加号添加单词
+</text></view>
+</view>

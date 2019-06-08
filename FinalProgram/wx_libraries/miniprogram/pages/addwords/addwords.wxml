@@ -1,0 +1,20 @@
+<!--pages/addbook/addbook.wxml-->
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    clearable
+    label="单词"
+    placeholder="请输入单词"
+    bind:input="onAddWords"
+  />
+
+  <van-field
+    value="{{ value }}"
+    clearable
+    label="释义"
+    placeholder="请输入单词的释义"
+    border="{{ false }}"
+    bind:input="onAddExplanation"
+  />
+</van-cell-group>
+<van-button plain type="info" block bind:click="navigateToHome">添加</van-button>

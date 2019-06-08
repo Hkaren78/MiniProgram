@@ -1,0 +1,17 @@
+/* pages/home/home.wxss */
+.all{
+  display: flex;
+  flex-direction: column;
+}
+.add{
+  bottom: 60rpx;
+  position: fixed;
+  align-self:center;
+}
+.text{
+  position: fixed;
+  text-align:center;
+  bottom:0;
+  left:0;
+  right:0;
+}
